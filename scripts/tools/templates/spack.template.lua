@@ -11,10 +11,11 @@ user's directories at
 
 local pkgBase = "__EPCC__SPACK__REPO__ROOT__"
 
-local pkgConfigBase= pathJoin( pkgBase, "config","archer2-user")
+local pkgConfigBase= pathJoin(pkgBase, "config","archer2-user")
 
--- Sets the root of the spack installation location.
+-- Sets the base and root of the Spack installation location.
 
+setenv("SPACK_BASE", pkgBase)
 setenv("SPACK_ROOT", pathJoin(pkgBase,"spack") )
 
 -- This is the user level package which will cache to a directory called .spack
